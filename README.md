@@ -39,6 +39,14 @@ We select some important files for detailed description.
     |-- main.py  # the main code
     |-- main_z.py  # obtains coefficient matrix z
     |-- main_h.py # obtains final layer embedding h
+
+|-- 实验五数据 # data to be trained and tested
+    |-- data/ # folder for texts and images, each sample has a unique text and a unique image, 4000 samples in sum
+    |-- train.txt # labels
+    |-- test_without_label.txt # samples to be tested
+|-- main.py # the main code
+|-- main_txt_only.py # models with only texts as input 
+|-- main_img_only.py # models with only images as input 
 ```
 
 ## Run pipeline for big-scale datasets
@@ -83,29 +91,4 @@ For more experiments running details, you can ref the running sh in the 'sh/' di
 ```python
 bash run_glognn_sota_reproduce_small.sh
 bash run_glognn++_sota_reproduce_small.sh
-```
-
-
-## Attribution
-
-Parts of this code are based on the following repositories:
-
-- [LINKX](https://github.com/CUAI/Non-Homophily-Large-Scale)
-
-- [PYGCN](https://github.com/tkipf/pygcn)
-
-- [WRGAT](https://github.com/susheels/gnns-and-local-assortativity/tree/main/struc_sim)
-
-
-## Citation
-
-If you find this code working for you, please cite:
-
-```python
-@article{li2022finding,
-  title={Finding Global Homophily in Graph Neural Networks When Meeting Heterophily},
-  author={Li, Xiang and Zhu, Renyu and Cheng, Yao and Shan, Caihua and Luo, Siqiang and Li, Dongsheng and Qian, Weining},
-  journal={arXiv preprint arXiv:2205.07308},
-  year={2022}
-}
 ```
