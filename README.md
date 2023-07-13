@@ -23,24 +23,8 @@ pip install -r requirements.txt
 We select some important files for detailed description.
 
 ```python
-|-- large-scale # experiments for 6 large-scale datasets
-    |-- data/ # some large-scale datasets
-    |-- dataset/  # the remaining large-scale datasets
-    |-- experiments/  # all run shs
-    |-- main.py # the main code
-    |-- main_z.py # obtains coefficient matrix z 
-    |-- models.py # includes all model implementations
-|-- paper-plots # all experimental plots in our paper
-|-- small-scale # experiments for 9 small-scale datasets
-    |-- data/ # 3 old datasets, including cora, citeseer, and pubmed
-    |-- new-data/ # 6 new datasets, including texas, wisconsin, cornell, actor, squirrel, and chameleon
-    |-- splits/ # splits for 6 new datasets
-    |-- sh/ # all run shs
-    |-- main.py  # the main code
-    |-- main_z.py  # obtains coefficient matrix z
-    |-- main_h.py # obtains final layer embedding h
 
-|-- 实验五数据 # data to be trained and tested
+|-- datafolder # data to be trained and tested
     |-- data/ # folder for texts and images, each sample has a unique text and a unique image, 4000 samples in sum
     |-- train.txt # labels
     |-- test_without_label.txt # samples to be tested
