@@ -12,7 +12,7 @@ from torchvision import transforms
 from torchtext.vocab import build_vocab_from_iterator
 import time
 
-data_path = "实验五数据/data"  # 替换为数据集所在的文件夹路径
+data_path = "datafolder/data"  # 替换为数据集所在的文件夹路径
 label_mapping = {"positive": 0, "negative": 1, "neutral": 2}
 
 class CustomDataset(Dataset):
