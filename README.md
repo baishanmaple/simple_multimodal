@@ -24,7 +24,7 @@ We select some important files for detailed description.
 
 ```python
 
-|-- datafolder # data to be trained and tested
+|-- datafolder # data to be trained and tested, not yet uploeaded
     |-- data/ # folder for texts and images, each sample has a unique text and a unique image, 4000 samples in sum
     |-- train.txt # labels
     |-- test_without_label.txt # samples to be tested
@@ -34,45 +34,11 @@ We select some important files for detailed description.
 ```
 
 ## Run pipeline for big-scale datasets
-1. Entering the large-scale directory and download 6 big-scale datasets from the repository of [LINKX](https://github.com/CUAI/Non-Homophily-Large-Scale). Notice, you should rename the datasets and place them in the right directory.
+You can run any models implemented in 'models.py'. For examples, you can run our model on 'genius' dataset by the script:
 ```python
-cd large-scale
-```
-
-2. You can run any models implemented in 'models.py'. For examples, you can run our model on 'genius' dataset by the script:
-```python
-python main.py --dataset genius --sub_dataset None --method mlpnorm
+python main.py
 ```
 And you can run other models, such as 
 ```python
-python main.py --dataset genius --sub_dataset None --method acmgcn
-```
-For more experiments running details, you can ref the running sh in the 'experiments/' directory.
-
-3. You can reproduce the experimental results of our method by running the scripts:
-```python
-bash run_glognn_sota_reproduce_big.sh
-bash run_glognn++_sota_reproduce_big.sh
-```
-
-
-
-## Run pipeline for small-scale datasets
-1. Entering the large-scale directory and we provide the original datasets with their splits.
-```python
-cd small-scale
-```
-
-2. You can run our model like the script in the below:
-```python
-python main.py --no-cuda --model mlp_norm --dataset chameleon --split 0
-```
-Notice, we run all small-scale datasets on CPUs.
-For more experiments running details, you can ref the running sh in the 'sh/' directory.
-
-
-3. You can reproduce the experimental results of our method by running the scripts:
-```python
-bash run_glognn_sota_reproduce_small.sh
-bash run_glognn++_sota_reproduce_small.sh
+python main_img_only.py
 ```
